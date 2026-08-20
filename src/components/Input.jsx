@@ -17,10 +17,15 @@ const Input = ({
                     : "Username";
 
     const inputType =
-        type === "age" ? "number" : type === "username" ? "text" : type;
+        type === "age"
+            ? "number"
+            : type === "username"
+                ? "text"
+                : type;
 
     return (
         <div className="mb-5">
+
             <label className="mb-2 block text-sm font-semibold text-slate-700">
                 {label}
             </label>
@@ -41,6 +46,7 @@ const Input = ({
                     {error}
                 </p>
             )}
+
         </div>
     );
 };

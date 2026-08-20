@@ -4,53 +4,75 @@ const Card = ({ data }) => {
     console.log(data);
 
     return (
-        <div className="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
-            <div className="mb-4 flex items-center gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-lg font-bold text-blue-600">
-                    {data.username?.charAt(0)?.toUpperCase() || "U"}
-                </div>
+        <div className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
 
-                <div>
-                    <h2 className="text-lg font-bold text-slate-800">
-                        {data.username}
-                    </h2>
+            {/* Card Header */}
+            <div className="bg-[#0d2f5c] px-5 py-6">
+                <div className="flex items-center gap-4">
 
-                    <p className="text-sm text-slate-500">
-                        User ID: {data.id}
-                    </p>
+                    <img
+                        src={data.image}
+                        alt={data.firstName}
+                        className="h-16 w-16 rounded-full border-4 border-white/20 object-cover"
+                    />
+
+                    <div className="min-w-0">
+                        <h2 className="text-lg font-bold text-white">
+                            {data.firstName} {data.lastName}
+                        </h2>
+
+                        <p className="text-sm text-blue-200">
+                            Username: {data.username}
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <div className="space-y-3 border-t border-slate-100 pt-4">
-                <div className="flex items-center justify-between gap-3">
-                    <span className="text-sm font-medium text-slate-500">
+            {/* Card Body */}
+            <div className="p-5">
+
+                <div className="mb-4">
+                    <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-slate-400">
                         Email
-                    </span>
+                    </p>
 
-                    <span className="max-w-[190px] truncate text-right text-sm font-semibold text-slate-800">
+                    <p className="break-all text-sm font-semibold leading-6 text-slate-800">
                         {data.email}
-                    </span>
+                    </p>
                 </div>
 
-                <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-slate-500">
-                        Age
-                    </span>
+                <div className="mb-4 flex items-center justify-between border-t border-slate-100 pt-4">
+                    <div>
+                        <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                            Age
+                        </p>
 
-                    <span className="text-sm font-semibold text-slate-800">
-                        {data.age}
-                    </span>
+                        <p className="mt-1 text-sm font-semibold text-slate-800">
+                            {data.age}
+                        </p>
+                    </div>
+
+                    <div>
+                        <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                            ID
+                        </p>
+
+                        <p className="mt-1 text-sm font-semibold text-slate-800">
+                            #{data.id}
+                        </p>
+                    </div>
                 </div>
 
-                <div className="flex items-center justify-between gap-3">
-                    <span className="text-sm font-medium text-slate-500">
+                <div className="border-t border-slate-100 pt-4">
+                    <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
                         Password
-                    </span>
+                    </p>
 
-                    <span className="text-sm font-semibold text-slate-800">
+                    <p className="mt-1 break-all text-sm font-semibold text-slate-800">
                         {data.password}
-                    </span>
+                    </p>
                 </div>
+
             </div>
         </div>
     );

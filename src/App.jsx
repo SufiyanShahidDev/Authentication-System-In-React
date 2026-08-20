@@ -14,19 +14,16 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* First screen */}
+
         <Route path="/" element={<Login />} />
 
         {/* Register */}
         <Route path="/register" element={<Register />} />
 
-        {/* Protected Dashboard */}
         <Route
           path="/dashboard"
           element={
-            <ProtectedRoute>
               <Home />
-            </ProtectedRoute>
           }
         />
 
