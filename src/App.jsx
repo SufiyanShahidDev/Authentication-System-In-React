@@ -1,7 +1,7 @@
 import "./App.css";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Home from "./pages/Dashboard/Home";
+import Home from "./pages/Dashboard/Home.jsx";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
 function ProtectedRoute({ children }) {
