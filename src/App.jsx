@@ -27,7 +27,6 @@ function App() {
           }
         />
 
-        {/* Unknown route */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
