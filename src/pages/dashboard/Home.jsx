@@ -98,12 +98,12 @@ const Home = () => {
 
                     <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                         <p className="text-sm font-medium text-slate-500">
-                            API Status
+                            Manage Users
                         </p>
 
                         <div className="mt-2 flex items-center justify-between">
                             <h3 className="text-xl font-bold text-green-600">
-                                Connected
+                                users are showed below
                             </h3>
 
                             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-100 text-green-600">
@@ -114,12 +114,12 @@ const Home = () => {
 
                     <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                         <p className="text-sm font-medium text-slate-500">
-                            Technology Used for API Fetch
+                            Login
                         </p>
 
                         <div className="mt-2 flex items-center justify-between">
                             <h3 className="text-xl font-bold text-[#123c73]">
-                                React + Axios
+                                Successful
                             </h3>
 
                             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-[#123c73]">
